@@ -3,8 +3,8 @@ import { geoEqualEarth, geoPath } from "d3-geo";
 import { feature } from "topojson-client";
 
 const projection = geoEqualEarth()
-  .scale(160)
-  .translate([800 / 2, 450 / 2]);
+  .scale(500)
+  .translate([1800 / 2, 1000 / 2]);
 
 const WorldMap = () => {
   const [geographies, setGeographies] = useState([]);
@@ -23,7 +23,7 @@ const WorldMap = () => {
   }, []);
 
   return (
-    <svg width={800} height={450} viewBox="0 0 800 450">
+    <svg width={1000} height={700} viewBox="0 0 1000 700">
       <g className="countries">
         {geographies.map((d, i) => (
           <path
